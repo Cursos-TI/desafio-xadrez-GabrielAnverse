@@ -1,26 +1,21 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
-
-// Constantes para direções (sugestão do professor)
 #define CIMA "Cima"
 #define BAIXO "Baixo"
 #define ESQUERDA "Esquerda"
 #define DIREITA "Direita"
 
-// Constantes para número de movimentos (sugestão do professor)
+// Constantes para número de movimentos
 #define MOV_BISPO 5
 #define MOV_TORRE 5
 #define MOV_RAINHA 8
 
-// Nível Novato - Movimentação das Peças
+// Movimentação das Peças
 void movimentoBispo() {
     // Implementação de Movimentação do Bispo (sugestão: loop para diagonal)
     printf("\nBispo movendo %d casas na diagonal superior direita:\n", MOV_BISPO);
     for(int i = 1; i <= MOV_BISPO; i++) {
-        printf("%s + %s\n", CIMA, DIREITA); // Combinação de direções
+        printf("%s + %s\n", CIMA, DIREITA); 
     }
 }
 
@@ -42,7 +37,7 @@ void movimentoRainha() {
     }
 }
 
-// Nível Aventureiro - Movimentação do Cavalo (esqueleto sugerido)
+// Movimentação do Cavalo (esqueleto sugerido)
 void movimentoCavalo() {
     // Sugestão: loops aninhados para movimento em L
     printf("\nCavalo movendo em L (baixo + esquerda):\n");
@@ -55,13 +50,13 @@ void movimentoCavalo() {
     }
 }
 
-// Nível Mestre - Funções Recursivas (esqueleto sugerido)
+// Funções Recursivas (esqueleto sugerido)
 void movimentoBispoRecursivo(int casa) {
     // Caso base
     if(casa > MOV_BISPO) return;
     
     printf("%s + %s (Recursivo)\n", CIMA, DIREITA);
-    movimentoBispoRecursivo(casa + 1); // Chamada recursiva
+    movimentoBispoRecursivo(casa + 1);
 }
 
 int main() {
